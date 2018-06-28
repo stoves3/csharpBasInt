@@ -1,0 +1,38 @@
+namespace stoves3.basInt.sourceSample
+{
+    public enum Fn
+    {
+        Unknown,
+        KISSDIE,
+        MUSIC,
+        CREDITS,
+        CUTPRINCESSFREE,
+        LEAVEPRINCESS,
+        TRYUNTIE,
+        WINGAME,
+        GETLAMP,
+        GETSTRONG,
+        KNOCKOUTWITCH,
+        MOATDIE,
+        POUROUTBOTTLE,
+        SNAKEHOLEDIE,
+        TRYTORUBLAMP,
+        TURNEDTOFROG,
+        LOSE,
+        INSTRUCTIONS,
+        JUMPOFFCLIFF,
+        YELL,
+        BUYBOMBS,
+        ROCKGOBOOM,
+        PULLSWORD,
+        SCOREPRINT,
+        WIMPEND,
+        FINALSCORE,
+        PLAYAGAIN,
+        SPACEBAR,
+        INSTRUCTION,
+        MAINMENU,
+        EXITSCREEN,
+        WARNING
+    }
+}
