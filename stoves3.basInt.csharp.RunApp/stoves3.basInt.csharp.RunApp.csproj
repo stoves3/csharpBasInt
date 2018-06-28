@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\stoves3.basInt.csharp.conversion\stoves3.basInt.sourceSample\stoves3.basInt.sourceSample.csproj">
+    <ProjectReference Include="..\stoves3.basInt.sourceSample\stoves3.basInt.sourceSample.csproj">
       <Project>{6346ff3c-0b15-4dcc-89c7-5fd83b76f891}</Project>
       <Name>stoves3.basInt.sourceSample</Name>
     </ProjectReference>
