@@ -24,7 +24,7 @@ namespace stoves3.basInt.csharp.core
 
             AllScreenPages = new List<IScreenPage>();
 
-            ConfiguraeScreen();
+            ConfigureScreen();
 
             SetActivePage(_activePage);
             SetVisualPage(visualPage);
@@ -40,10 +40,8 @@ namespace stoves3.basInt.csharp.core
             _visualPage = page;
         }
 
-        private void ConfiguraeScreen()
+        private void ConfigureScreen()
         {
-
-
             switch (Mode)
             {
             }

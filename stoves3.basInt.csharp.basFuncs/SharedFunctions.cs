@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using stoves3.basInt.csharp.core;
 
@@ -48,16 +45,26 @@ namespace stoves3.basInt.csharp.basFuncs
             return int.Parse(text);
         }
 
-        public static string Input(this IScreen screen, string displayQuestionText)
+        public static string INKEYṨ(this IScreen screen, IInput input)
+        {
+            return input.INKEYṨ(screen);
+        }
+
+        public static string Input(this IScreen screen, IInput input, string displayQuestionText)
         {
             var inputDisplay = $"{displayQuestionText}? ";
             screen.Print(text: inputDisplay);
-            return null;
+            return input.Input(screen);
         }
 
         public static string Ucase(string text)
         {
             return text.ToUpper();
+        }
+
+        public static void Play(this ISound sound, string musicString)
+        {
+            sound.Play(musicString);
         }
     }
 }

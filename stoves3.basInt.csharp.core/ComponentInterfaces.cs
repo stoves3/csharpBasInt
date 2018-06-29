@@ -36,6 +36,16 @@ namespace stoves3.basInt.csharp.core
         List<IScreenPage> AllScreenPages { get; }
         IScreenPage ActivePage { get; }
         IScreenPage VisualPage { get; }
-        string Input(string text);
+    }
+
+    public interface ISound
+    {
+        void Play(string musicString);
+    }
+
+    public interface IInput
+    {
+        string Input(IScreen screen);
+        string INKEYṨ(IScreen screen);
     }
 }

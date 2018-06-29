@@ -42,7 +42,8 @@
     <Compile Include="FnEnum.cs" />
     <Compile Include="FunctionDefs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strings.cs" />
+    <Compile Include="Sounds\Sounds.cs" />
+    <Compile Include="Strings\Strings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\stoves3.basInt.csharp.basFuncs\stoves3.basInt.csharp.basFuncs.csproj">
