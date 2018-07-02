@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stoves3.basInt.csharp.conve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stoves3.basInt.csharp.RunApp", "stoves3.basInt.csharp.RunApp\stoves3.basInt.csharp.RunApp.csproj", "{78C5641F-1EB9-4E76-940B-65423737AB95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stoves3.basInt.csharp.UI", "stoves3.basInt.csharp.UI\stoves3.basInt.csharp.UI.csproj", "{8424BE02-2455-4C13-BC9B-691C35D1C75A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{78C5641F-1EB9-4E76-940B-65423737AB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78C5641F-1EB9-4E76-940B-65423737AB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C5641F-1EB9-4E76-940B-65423737AB95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8424BE02-2455-4C13-BC9B-691C35D1C75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8424BE02-2455-4C13-BC9B-691C35D1C75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8424BE02-2455-4C13-BC9B-691C35D1C75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8424BE02-2455-4C13-BC9B-691C35D1C75A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,6 +16,7 @@ namespace stoves3.basInt.sourceSample
         private IScreen _screen;
         private readonly ISound _sound;
         private readonly IInput _input;
+        private readonly IUI _ui;
         
         #region Shared Vars
 
@@ -32,9 +33,10 @@ namespace stoves3.basInt.sourceSample
 
         #endregion
 
-        public FunctionDefs()
+        public FunctionDefs(IUI ui)
         {
-            _input = new Keyboard();
+            _ui = ui;
+            _input = new Keyboard(_ui);
             _sound = new Sound();
         }
 
@@ -1031,12 +1033,13 @@ namespace stoves3.basInt.sourceSample
 
         private void SCREEN(int mode, int colorswitch = 0, int activePage = 0, int visualPage = 0)
         {
-            _screen = SharedFunctions.Screen(mode, colorswitch, activePage, visualPage);
+            _screen = SharedFunctions.Screen(_ui, mode, colorswitch, activePage, visualPage);
+            _screen.Cls();
         }
 
-        private void COLOR(int color)
+        private void COLOR(int foregroundColor, int backgroundColor = -1)
         {
-            _screen.Color(color);
+            _screen.Color(foregroundColor, backgroundColor);
         }
 
         private void LOCATE(int row, int column = 1)
@@ -1052,12 +1055,12 @@ namespace stoves3.basInt.sourceSample
 
         private string INKEYṨ()
         {
-            return _screen.INKEYṨ(_input);
+            return _screen.InkeyṨ(_input);
         }
 
         private void CLS()
         {
-            _screen.CLS();
+            _screen.Cls();
         }
 
         private void INPUT(string text, out string inputVar)

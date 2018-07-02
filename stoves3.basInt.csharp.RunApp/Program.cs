@@ -1,4 +1,5 @@
-﻿using stoves3.basInt.sourceSample;
+﻿using stoves3.basInt.csharp.UI;
+using stoves3.basInt.sourceSample;
 
 namespace stoves3.basInt.csharp.RunApp
 {
@@ -6,7 +7,7 @@ namespace stoves3.basInt.csharp.RunApp
     {
         static void Main(string[] args)
         {
-            new FunctionDefs().Run();
+            new FunctionDefs(new Console()).Run();
         }
     }
 }

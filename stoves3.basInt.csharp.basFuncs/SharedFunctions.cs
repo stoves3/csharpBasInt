@@ -6,23 +6,24 @@ namespace stoves3.basInt.csharp.basFuncs
 {
     public static class SharedFunctions
     {
+        #region IScreen
 
-        public static void CLS(this IScreen screen)
+        public static void Cls(this IScreen screen)
         {
-            screen.ActivePage.ScreenTextBuffer.Reset();
+            screen.Cls();
         }
 
-        public static IScreen Screen(int mode, int colorswitch = 0, int activePage = 0, int visualPage = 0)
+        public static IScreen Screen(IUI ui, int mode, int colorswitch = 0, int activePage = 0, int visualPage = 0)
         {
-            return new BasicScreen(mode, colorswitch, activePage, visualPage);
+            return new BasicScreen(ui, (ScreenMode)mode, colorswitch, activePage, visualPage);
         }
 
-        public static void Color(this IScreen screen, int colorIndex)
+        public static void Color(this IScreen screen, int foregroundColorIndex, int backgroundColorIndex = -1)
         {
-            screen.ActivePage.Color(colorIndex);
+            screen.ActivePage.Color(foregroundColorIndex, backgroundColorIndex);
         }
 
-        public static void Locate(this IScreen screen, int row = 1, int column = 1, int cursor = 0, int start = 0, int stop = 0)
+        public static void Locate(this IScreen screen, int row = 1, int column = 1, int cursor = 1, int start = 0, int stop = 0)
         {
             if (row < 1) row = 1;
             if (column < 1) column = 1;
@@ -35,17 +36,21 @@ namespace stoves3.basInt.csharp.basFuncs
             screen.ActivePage.Print(fileNumber, text, tab);
         }
 
-        public static void Sleep(int seconds)
+        public static void Width(this IScreen screen, TextColumnWidth columns, TextRowHeight rows)
         {
-            Thread.Sleep(new TimeSpan(0, 0, seconds));
+            screen.Width(columns, rows);
         }
 
-        public static int Val(string text)
+        public static void Width(this IScreen screen, int fileNumber, TextColumnWidth columns, TextRowHeight rows)
         {
-            return int.Parse(text);
+
         }
 
-        public static string INKEYṨ(this IScreen screen, IInput input)
+        #endregion
+
+        #region IInput
+
+        public static string InkeyṨ(this IScreen screen, IInput input)
         {
             return input.INKEYṨ(screen);
         }
@@ -57,14 +62,34 @@ namespace stoves3.basInt.csharp.basFuncs
             return input.Input(screen);
         }
 
-        public static string Ucase(string text)
-        {
-            return text.ToUpper();
-        }
+        #endregion
+
+        #region ISound
 
         public static void Play(this ISound sound, string musicString)
         {
             sound.Play(musicString);
         }
+
+        #endregion
+
+        #region Misc
+
+        public static void Sleep(int seconds)
+        {
+            Thread.Sleep(new TimeSpan(0, 0, seconds));
+        }
+
+        public static int Val(string text)
+        {
+            return int.Parse(text);
+        }
+
+        public static string Ucase(string text)
+        {
+            return text.ToUpper();
+        }
+
+        #endregion
     }
 }

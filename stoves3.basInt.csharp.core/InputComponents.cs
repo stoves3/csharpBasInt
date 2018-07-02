@@ -7,14 +7,21 @@ namespace stoves3.basInt.csharp.core
 {
     public class Keyboard : IInput
     {
+        private readonly IUI _ui;
+
+        public Keyboard(IUI ui)
+        {
+            _ui = ui;
+        }
+
         public string INKEYṨ(IScreen screen)
         {
-            throw new NotImplementedException();
+            return _ui.GetChar();
         }
 
         public string Input(IScreen screen)
         {
-            throw new NotImplementedException();
+            return _ui.GetInput();
         }
     }
 }
