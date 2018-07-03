@@ -211,7 +211,7 @@
         public const string CastlePicture2L3 = @"       (     (   ³ ÞÝ ³   )     )";
         public const string CastlePicture2L4 = @"        (___ÚÄ¿_ÚÁ¿  ÚÁ¿_ÚÄ¿___)";
         public const string CastlePicture2L5 = @"            ³ ÀÄÙ ÀÄÄÙ ÀÄÙ ³";
-        public const string CastlePicture2L6 = @"            ³  Û  ÚÂÂ¿  Û  ³";
+        public const string CastlePicture2L6 = @"            ³  Û  ÚÄÄ¿  Û  ³";
         public const string CastlePicture2L7 = @"          ÚÄ´     ³  ³     ÃÄ¿";
         public const string CastlePicture2L8 = @"          ³÷ÀÄÄÄÄÄÅÂÂÅÄÄÄÄÄÙ÷³";
         public const string CastlePicture2L9 = @"          ³÷÷÷÷÷÷÷³³³³÷÷÷÷÷÷÷³";

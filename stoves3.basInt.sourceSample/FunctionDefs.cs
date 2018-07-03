@@ -1050,6 +1050,7 @@ namespace stoves3.basInt.sourceSample
         private void PRINT(string text = null, bool tab = false, params object[] vars)
         {
             if (vars.Any() && !string.IsNullOrWhiteSpace(text)) text = string.Format(text, vars);
+
             _screen.Print(text: text, tab: tab);
         }
 

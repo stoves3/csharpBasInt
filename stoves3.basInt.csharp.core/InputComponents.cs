@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace stoves3.basInt.csharp.core
+﻿namespace stoves3.basInt.csharp.core
 {
     public class Keyboard : IInput
     {

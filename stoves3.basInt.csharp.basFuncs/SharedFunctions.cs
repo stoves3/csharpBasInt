@@ -38,7 +38,7 @@ namespace stoves3.basInt.csharp.basFuncs
 
         public static void Width(this IScreen screen, TextColumnWidth columns, TextRowHeight rows)
         {
-            screen.Width(columns, rows);
+            screen.SetWidth(columns, rows);
         }
 
         public static void Width(this IScreen screen, int fileNumber, TextColumnWidth columns, TextRowHeight rows)

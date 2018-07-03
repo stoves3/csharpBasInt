@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Security.Cryptography.X509Certificates;
 
 namespace stoves3.basInt.csharp.core
 {
@@ -44,7 +43,7 @@ namespace stoves3.basInt.csharp.core
         IScreenPage ActivePage { get; }
         IScreenPage VisualPage { get; }
 
-        void Width(TextColumnWidth columns, TextRowHeight rows, int fileNumber);
+        void SetWidth(TextColumnWidth columns, TextRowHeight rows, int fileNumber = -1);
         void Cls();
     }
 

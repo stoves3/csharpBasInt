@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Security.Policy;
 using System.Text;
 
 namespace stoves3.basInt.csharp.core
@@ -89,7 +87,7 @@ namespace stoves3.basInt.csharp.core
 
         }
 
-        public void Width(TextColumnWidth columns, TextRowHeight rows, int fileNumber = -1)
+        public void SetWidth(TextColumnWidth columns, TextRowHeight rows, int fileNumber = -1)
         {
             _ui.Width((int)columns, (int)rows);
         }
@@ -117,7 +115,7 @@ namespace stoves3.basInt.csharp.core
                 case ScreenMode.Zero:
                     _resolution = null;
                     _textResolution = new TextResolution(TextColumnWidth.Eighty, TextRowHeight.TwentyFive);
-                    Width(TextColumnWidth.Eighty, TextRowHeight.TwentyFive);
+                    SetWidth(TextColumnWidth.Eighty, TextRowHeight.TwentyFive);
                     _colorEnabled = true;
                     _colorAttributes = ColorAttributes.Sixteen;
                     _colorDepth = ColorDepth.d4Bit;
@@ -209,8 +207,6 @@ namespace stoves3.basInt.csharp.core
 
     public class BasicPage : IScreenPage
     {
-        private static readonly Encoding OutputEncoding = Encoding.ASCII;
-
         public IPixel[,] VideoBuffer { get; }
         public IPalette Palette { get; set; }
         public ITextBuffer ScreenTextBuffer { get; }
@@ -282,10 +278,8 @@ namespace stoves3.basInt.csharp.core
 
         public void Print(int fileNumber, string text, bool tab = false)
         {
-            Console.OutputEncoding = OutputEncoding;
-
             if (_textIsBlinking && !string.IsNullOrWhiteSpace(text)) _blinkingTexts.Add(new BlinkingText {Text = text, Location = _cursorLoc, ColorIndex = CurrentForegroundColorIndex});
-
+            
             _ui.Print(text, !tab);
         }
 
@@ -293,6 +287,7 @@ namespace stoves3.basInt.csharp.core
         {
             ScreenTextBuffer.Reset();
             _blinkingTexts.Clear();
+            _ui.Cls();
         }
 
         private class BlinkingText
